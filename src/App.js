@@ -5,7 +5,9 @@ import Number from './components/Number';
 class App extends Component {
   render() {
     return (
-        <Number />
+    	<div className="container">
+        	<Number />
+        </div>
     );
   }
 }

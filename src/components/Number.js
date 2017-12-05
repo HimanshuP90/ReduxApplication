@@ -10,19 +10,17 @@ class Number extends Component {
 	render () {
 		return (
 			<div>
-				<div className="row col-sm-offset-5">
-				<p>{this.props.num}</p>
+				<div className="row col-md-offset-5">
+					<b>{this.props.num}</b>
 				</div>
-				<div className="row col-sm-offset-4">
+				<div className="row col-md-offset-4">
 					<Button bsStyle="primary" 
 						onClick={() => this.props.incrementNumber(this.props.num)} >
 						Increment
 					</Button>
-				</div>
-				<div className="row col-sm-offset-8">
-					<Button bsStyle="danger" 
+					<Button bsStyle="danger" className="col-sm-offset-1"
 						onClick={() => this.props.decrementNumber(this.props.num)} >
-						Increment
+						Decrement
 					</Button>
 				</div>
 			</div>
