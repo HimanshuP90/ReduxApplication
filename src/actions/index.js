@@ -7,3 +7,7 @@ export function incrementNumber(num) {
 	};
 	return action;
 }
+
+
+
+// UI ---> Actions --->Reducers ---> Store ---> State ---> UI

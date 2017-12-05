@@ -6,14 +6,17 @@ import registerServiceWorker from './registerServiceWorker';
 
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { incrementNumber } from './actions';
+// import { incrementNumber } from './actions';
 import rootReducer from './reducers';
 
-const store = createStore(rootReducer);
+const store = createStore(
+	rootReducer,
+	   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+	);
 
 store.subscribe(() => console.log('store', store.getState()));
 
-store.dispatch(incrementNumber(store.getState));
+// store.dispatch(incrementNumber(store.getState));
 
 ReactDOM.render(
 
