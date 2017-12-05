@@ -1,4 +1,5 @@
 export const INC_NUMBER = "INC_NUMBER";
+export const DEC_NUMBER = "DEC_NUMBER";
 
 export function incrementNumber(num) {
 	const action = {
@@ -9,5 +10,12 @@ export function incrementNumber(num) {
 }
 
 
+export function decrementNumber(num) {
+	const action = {
+		type: DEC_NUMBER,
+		num
+	};
+	return action;
+}
 
 // UI ---> Actions --->Reducers ---> Store ---> State ---> UI
